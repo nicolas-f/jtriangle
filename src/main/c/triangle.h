@@ -282,6 +282,9 @@ struct triangulateio {
 
 #ifdef TRI_JAVA_LIBRARY
 struct triangulateio * createEmptyStruct();
+struct triangulateio * createInputStruct(REAL *pointlist, REAL *pointattributelist, int *pointmarkerlist,int numberofpoints,int numberofpointattributes,int *trianglelist,
+                                           REAL *triangleattributelist,REAL *trianglearealist,int numberoftriangles,int numberofcorners,int numberoftriangleattributes,
+                                           int *segmentlist,int *segmentmarkerlist,int numberofsegments,REAL *holelist,int numberofholes,REAL *regionlist,int numberofregions);
 #endif
 
 #ifdef ANSI_DECLARATORS

@@ -16025,4 +16025,29 @@ char **argv;
       mid->edgemarkerlist = (int *) NULL;   /* Needed if -e used and -B not used. */
       return mid;
     }
+
+    struct triangulateio * createInputStruct(REAL *pointlist, REAL *pointattributelist, int *pointmarkerlist,int numberofpoints,int numberofpointattributes,int *trianglelist,
+                                               REAL *triangleattributelist,REAL *trianglearealist,int numberoftriangles,int numberofcorners,int numberoftriangleattributes,
+                                               int *segmentlist,int *segmentmarkerlist,int numberofsegments,REAL *holelist,int numberofholes,REAL *regionlist,int numberofregions) {
+        struct triangulateio* mid = malloc(sizeof(struct triangulateio));
+        mid->pointlist = pointlist;
+        mid->pointattributelist = pointattributelist;
+        mid->pointmarkerlist = pointmarkerlist;
+        mid->numberofpoints = numberofpoints;
+        mid->numberofpointattributes = numberofpointattributes;
+        mid->trianglelist = trianglelist;
+        mid->triangleattributelist = triangleattributelist;
+        mid->trianglearealist = trianglearealist;
+        mid->numberoftriangles = numberoftriangles;
+        mid->numberofcorners = numberofcorners;
+        mid->numberoftriangleattributes = numberoftriangleattributes;
+        mid->segmentlist = segmentlist;
+        mid->segmentmarkerlist = segmentmarkerlist;
+        mid->numberofsegments = numberofsegments;
+        mid->holelist = holelist;
+        mid->numberofholes = numberofholes;
+        mid->regionlist = regionlist;
+        mid->numberofregions = numberofregions;
+        return mid;
+    }
 #endif
