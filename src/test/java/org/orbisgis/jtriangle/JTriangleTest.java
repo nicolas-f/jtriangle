@@ -1,9 +1,7 @@
 package org.orbisgis.jtriangle;
 
 import org.junit.Test;
-
-import static org.hamcrest.Matchers.closeTo;
-import static org.junit.Assert.assertThat;
+import org.renjin.gcc.runtime.Ptr;
 
 /**
  * Example of using a compiled C function from Java
@@ -12,8 +10,8 @@ public class JTriangleTest {
 
   @Test
   public void simplePointMesh() {
-
-    assertThat(true);
+    Ptr out = triangle.createEmptyStruct();
+    assert(true);
   }
 
 }

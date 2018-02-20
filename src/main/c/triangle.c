@@ -16004,3 +16004,25 @@ char **argv;
   return 0;
 #endif /* not TRILIBRARY */
 }
+
+
+#ifdef TRI_JAVA_LIBRARY
+    struct triangulateio * createEmptyStruct() {
+      struct triangulateio* mid = malloc(sizeof(struct triangulateio));
+      mid->pointlist = (REAL *) NULL;            /* Not needed if -N switch used. */
+      /* Not needed if -N switch used or number of point attributes is zero: */
+      mid->pointattributelist = (REAL *) NULL;
+      mid->pointmarkerlist = (int *) NULL; /* Not needed if -N or -B switch used. */
+      mid->trianglelist = (int *) NULL;          /* Not needed if -E switch used. */
+      /* Not needed if -E switch used or number of triangle attributes is zero: */
+      mid->triangleattributelist = (REAL *) NULL;
+      mid->neighborlist = (int *) NULL;         /* Needed only if -n switch used. */
+      /* Needed only if segments are output (-p or -c) and -P not used: */
+      mid->segmentlist = (int *) NULL;
+      /* Needed only if segments are output (-p or -c) and -P and -B not used: */
+      mid->segmentmarkerlist = (int *) NULL;
+      mid->edgelist = (int *) NULL;             /* Needed only if -e switch used. */
+      mid->edgemarkerlist = (int *) NULL;   /* Needed if -e used and -B not used. */
+      return mid;
+    }
+#endif

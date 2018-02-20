@@ -279,6 +279,11 @@ struct triangulateio {
   int numberofedges;                                             /* Out only */
 };
 
+
+#ifdef TRI_JAVA_LIBRARY
+struct triangulateio * createEmptyStruct();
+#endif
+
 #ifdef ANSI_DECLARATORS
 void triangulate(char *, struct triangulateio *, struct triangulateio *,
                  struct triangulateio *);

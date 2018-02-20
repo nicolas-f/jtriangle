@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <gcc.bridge.version>0.8.2341</gcc.bridge.version>
+        <gcc.bridge.version>0.9.2594</gcc.bridge.version>
     </properties>
 
 
@@ -60,8 +60,6 @@
                     <!-- Sets the package name of all generated classes -->
                     <packageName>org.orbisgis.jtriangle</packageName>
 
-                    <!-- If sets, generates a single class -->
-                    <mainClass>JTriangle</mainClass>
 
                     <!-- only compile sources need for the library, not the command line tool -->
                     <sourceFiles>
@@ -70,6 +68,9 @@
                        
                     <cFlags>
                        <flag>-DTRILIBRARY</flag>
+                       <flag>-DNO_TIMER</flag>
+                       <flag>-DTRI_JAVA_LIBRARY</flag>
+                        <flag>-DANSI_DECLARATORS</flag>
                     </cFlags>
                 </configuration>
                 <executions>
