@@ -28,7 +28,7 @@ public class JTriangleTest {
 
     Ptr in = triangle.createInputStruct(new DoublePtr(pointlist), new DoublePtr(pointAttribute),
             new DoublePtr(pointMarker),pointlist.length/2,numberofpointattributes,new IntPtr(),new DoublePtr(),
-            new DoublePtr(),0, 0,0,new IntPtr(0),new IntPtr(),0,new DoublePtr(),0,new DoublePtr(regions), regions.length);
+            new DoublePtr(),0, 0,0,new IntPtr(0),new IntPtr(),0,new DoublePtr(),0,new DoublePtr(regions), regions.length/4);
 
 
     // Run triangulation
